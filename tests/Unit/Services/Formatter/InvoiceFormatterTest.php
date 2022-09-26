@@ -13,7 +13,7 @@ class InvoiceFormatterTest extends TestCase
         $formatter = new InvoiceFormatter();
         $currency = $formatter->currency(73.25328, 'de_DE', 'EUR');
 
-        $this->assertEquals($currency, '73,25 €');
+        $this->assertEquals('73,25 €', $currency);
     }
 
     public function testDate()
@@ -28,7 +28,7 @@ class InvoiceFormatterTest extends TestCase
     {
         $formatter = new InvoiceFormatter();
 
-        $this->assertEquals($formatter->percentage(13, 2), '13.00%');
-        $this->assertEquals($formatter->percentage(5), '5%');
+        $this->assertEquals('13.00%', $formatter->percentage(13, 2));
+        $this->assertEquals('5%', $formatter->percentage(5));
     }
 }

@@ -13,7 +13,7 @@ class InvoiceTest extends TestCase
         $invoice = new Invoice();
         $invoice->setTotalPayment(1000);
 
-        $this->assertEquals($invoice->getTotalPayment(), 1000);
+        $this->assertEquals(1000, $invoice->getTotalPayment());
     }
 
     public function testGetTotalTaxes()
@@ -21,7 +21,7 @@ class InvoiceTest extends TestCase
         $invoice = new Invoice();
         $invoice->setTotalTaxes(1000);
 
-        $this->assertEquals($invoice->getTotalTaxes(), 1000);
+        $this->assertEquals(1000, $invoice->getTotalTaxes());
     }
 
     public function testGetGeneratedDate()
@@ -33,12 +33,12 @@ class InvoiceTest extends TestCase
         $this->assertEquals($invoice->getGeneratedDate(), $dt);
     }
 
-    public function testGetmonthlyTaxesPct()
+    public function testGetMonthlyTaxesPct()
     {
         $invoice = new Invoice();
         $invoice->setMonthlyTaxesPct(13);
 
-        $this->assertEquals($invoice->getMonthlyTaxesPct(), 13);
+        $this->assertEquals(13, $invoice->getMonthlyTaxesPct());
     }
 
     public function testGetMeterReading()
@@ -46,7 +46,7 @@ class InvoiceTest extends TestCase
         $invoice = new Invoice();
         $invoice->setMeterReading(2564);
 
-        $this->assertEquals($invoice->getMeterReading(), 2564);
+        $this->assertEquals(2564, $invoice->getMeterReading());
     }
 
     public function testGetTariffPricePerKwh()
@@ -54,6 +54,6 @@ class InvoiceTest extends TestCase
         $invoice = new Invoice();
         $invoice->setTariffPricePerKwh(0.028);
 
-        $this->assertEquals($invoice->getTariffPricePerKwh(), 0.028);
+        $this->assertEquals(0.028, $invoice->getTariffPricePerKwh());
     }
 }

@@ -13,7 +13,7 @@ class InvoiceTypeCTest extends TestCase
     public function testGetType()
     {
         $invoiceType = new InvoiceTypeC(new Invoice(), new Bonus());
-        $this->assertEquals($invoiceType->getType(), 'C');
+        $this->assertEquals('C', $invoiceType->getType());
     }
 
     public function testGetTotalPayment()
@@ -27,10 +27,10 @@ class InvoiceTypeCTest extends TestCase
         $bonus->setValidFrom(new DateTime('2021-01-01'));
         $bonus->setValidUntil(new DateTime('2021-12-31'));
         $bonus->setValue(5);
-        $this->assertEquals((new InvoiceTypeC($invoice, $bonus))->getTotalPayment(), 78.25328);
+        $this->assertEquals(78.25328, (new InvoiceTypeC($invoice, $bonus))->getTotalPayment());
 
         $bonus->setValidFrom(new DateTime('2021-01-01'));
         $bonus->setValidUntil(new DateTime('2023-12-31'));
-        $this->assertEquals((new InvoiceTypeC($invoice, $bonus))->getTotalPayment(), 73.25328);
+        $this->assertEquals(73.25328, (new InvoiceTypeC($invoice, $bonus))->getTotalPayment());
     }
 }

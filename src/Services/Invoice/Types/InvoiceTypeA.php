@@ -6,17 +6,11 @@ namespace App\Services\Invoice\Types;
 
 class InvoiceTypeA extends InvoiceType implements InvoiceTypeInterface
 {
-    /**
-     * @inheritDoc
-     */
     public function getType(): string
     {
         return 'A';
     }
 
-    /**
-     * @inheritDoc
-     */
     public function getTotalPayment(): float
     {
         $brutto = $this->getBrutto();

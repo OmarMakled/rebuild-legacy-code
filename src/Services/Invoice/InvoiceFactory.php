@@ -14,28 +14,12 @@ use App\Services\Invoice\Types\InvoiceTypeInterface;
 
 class InvoiceFactory
 {
-    /**
-     * @var Invoice
-     */
-    private Invoice $invoice;
-
-    /**
-     * @var Bonus
-     */
-    private Bonus $bonus;
-
-    /**
-     * @param Invoice $invoice
-     * @param Bonus $bonus
-     */
-    public function __construct(Invoice $invoice, Bonus $bonus)
+    public function __construct(private readonly Invoice $invoice, private readonly Bonus $bonus)
     {
-        $this->invoice = $invoice;
-        $this->bonus = $bonus;
     }
 
     /**
-     * @return InvoiceTypeInterface
+     * Get invoice type.
      */
     public function getType(): InvoiceTypeInterface
     {

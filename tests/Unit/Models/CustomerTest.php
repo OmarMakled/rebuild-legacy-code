@@ -12,7 +12,7 @@ class CustomerTest extends TestCase
         $customer = new Customer();
         $customer->setId('foo');
 
-        $this->assertEquals($customer->getId(), 'foo');
+        $this->assertEquals('foo', $customer->getId());
     }
 
     public function testGetFirstName()
@@ -20,7 +20,7 @@ class CustomerTest extends TestCase
         $customer = new Customer();
         $customer->setFirstName('foo');
 
-        $this->assertEquals($customer->getFirstName(), 'foo');
+        $this->assertEquals('foo', $customer->getFirstName());
     }
 
     public function testGetLastName()
@@ -28,6 +28,6 @@ class CustomerTest extends TestCase
         $customer = new Customer();
         $customer->setLastName('foo');
 
-        $this->assertEquals($customer->getLastName(), 'foo');
+        $this->assertEquals('foo', $customer->getLastName());
     }
 }

@@ -10,12 +10,9 @@ use DateTimeInterface;
 class InvoiceFormatter
 {
     /**
-     * @param float $amount
-     * @param string $locale
-     * @param string $currency
-     * @return string
+     * Format the given number to currency.
      */
-    public function currency(float $amount, string $locale, string $currency): string
+    public function currency(float $amount, string $locale, string $currency): string|false
     {
         $fmt = new NumberFormatter($locale, NumberFormatter::CURRENCY);
 
@@ -23,9 +20,7 @@ class InvoiceFormatter
     }
 
     /**
-     * @param DateTimeInterface $dt
-     * @param string $format
-     * @return string
+     * Format the given date.
      */
     public function date(DateTimeInterface $dt, string $format): string
     {
@@ -33,9 +28,7 @@ class InvoiceFormatter
     }
 
     /**
-     * @param int $value
-     * @param int $suffix
-     * @return string
+     * Format the given number to percentage.
      */
     public function percentage(int $value, int $suffix = 0): string
     {

@@ -13,7 +13,7 @@ class BonusTest extends TestCase
         $bonus = new Bonus();
         $bonus->setId('foo');
 
-        $this->assertEquals($bonus->getId(), 'foo');
+        $this->assertEquals('foo', $bonus->getId());
     }
 
     public function testGetValidFrom()
@@ -39,6 +39,6 @@ class BonusTest extends TestCase
         $bonus = new Bonus();
         $bonus->setValue(1000);
 
-        $this->assertEquals($bonus->getValue(), 1000);
+        $this->assertEquals(1000, $bonus->getValue());
     }
 }

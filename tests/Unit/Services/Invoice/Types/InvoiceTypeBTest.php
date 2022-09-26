@@ -12,6 +12,6 @@ class InvoiceTypeBTest extends TestCase
     public function testGetType()
     {
         $invoice = new InvoiceTypeB(new Invoice(), new Bonus());
-        $this->assertEquals($invoice->getType(), 'B');
+        $this->assertEquals('B', $invoice->getType());
     }
 }

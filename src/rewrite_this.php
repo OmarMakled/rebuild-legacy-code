@@ -72,7 +72,7 @@ class InvoiceCalculator
         $this->calculate($this->invoice);
         $totalTaxes = sprintf('%.2f%%', (float) $this->invoice['total_taxes']);
         $fmt = new NumberFormatter('de_DE', NumberFormatter::CURRENCY);
-        $totalAmount = $fmt->formatCurrency($this->invoice['total_payment'], 'EUR');
+        $totalAmount = $fmt->formatCurrency( $this->invoice['total_payment'] , 'EUR');
         $bonus = $this->bonus['value'];
         $date = $this->invoice['generated_date']->format('d.m.Y');
         echo "<h1>Invoice Calculator</h1>
@@ -91,7 +91,7 @@ $invoice = new InvoiceCalculator();
 $invoice->customer_identification = 'ABC123321CBA';
 $invoice->customer_first_name = 'John';
 $invoice->customer_last_name = 'Doe';
-$invoice->meter_reading_input = 0;
+$invoice->meter_reading_input = 2564;
 $invoice->tariff_price_per_kwh = 0.028;
 $invoice->bonus = [
     'identifier' => 'AABBCC',

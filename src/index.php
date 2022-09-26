@@ -14,7 +14,7 @@ $customer->setFirstName('John');
 $customer->setLastName('Doe');
 
 $invoice = new Invoice();
-$invoice->setMeterReading(0);
+$invoice->setMeterReading(2564);
 $invoice->setTariffPricePerKwh(0.028);
 $invoice->setMonthlyTaxesPct(13);
 

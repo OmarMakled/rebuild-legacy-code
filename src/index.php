@@ -37,7 +37,7 @@ echo "<h1>Invoice Calculator</h1>
 <div><label>Identification: </label> <span>{$customer->getId()}</span></div>
 <div><label>Name: </label> <span>{$customer->getFirstName()} {$customer->getLastName()}</span></div>
 <div><label>Tier: </label> <span>{$invoiceType->getType()}</span></div>
-<div><label>Bonus: </label> <span>{$bonus}</span></div>
-<div><label>Taxes: </label> <span>{$taxes}</span></div>
-<div><label>Total amount: </label> <span>{$totalAmount}</span></div>
-<div><label>Date of calculation: </label> <span>{$dateOfCalculation}</span></div>";
+<div><label>Bonus: </label> <span>$bonus</span></div>
+<div><label>Taxes: </label> <span>$taxes</span></div>
+<div><label>Total amount: </label> <span>$totalAmount</span></div>
+<div><label>Date of calculation: </label> <span>$dateOfCalculation</span></div>";

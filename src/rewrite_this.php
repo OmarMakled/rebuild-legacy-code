@@ -72,7 +72,7 @@ class InvoiceCalculator
         $this->calculate($this->invoice);
         $totalTaxes = sprintf('%.2f%%', (float) $this->invoice['total_taxes']);
         $fmt = new NumberFormatter('de_DE', NumberFormatter::CURRENCY);
-        $totalAmount = $fmt->formatCurrency( $this->invoice['total_payment'] , 'EUR');
+        $totalAmount = $fmt->formatCurrency($this->invoice['total_payment'], 'EUR');
         $bonus = $this->bonus['value'];
         $date = $this->invoice['generated_date']->format('d.m.Y');
         echo "<h1>Invoice Calculator</h1>
